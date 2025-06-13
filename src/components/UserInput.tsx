@@ -1,8 +1,10 @@
+import type { Dispatch, SetStateAction } from "react";
+import type { Message } from "src/types/messageType";
 import { Container, Flex, Button, Input, useToast } from "@chakra-ui/react";
-import { type Dispatch, type SetStateAction, useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { useLanguageModelSession } from "src/hooks/useLanguageModelSession";
 import { streamToAsyncIterable } from "src/utils/streamToAsyncIterable";
-type Message = { role: "user" | "assistant"; text: string };
+
 type Props = {
   setMessages: Dispatch<SetStateAction<Message[]>>;
 };
@@ -47,7 +49,7 @@ export const UserInput = ({ setMessages }: Props) => {
       ]);
     }
     setSending(false);
-    inputRef.current?.focus();
+    // inputRef.current?.focus();
   };
   return (
     <Container

@@ -1,8 +1,12 @@
+import type { Message } from "src/types/messageType";
 import { Box, Flex, Text, VStack } from "@chakra-ui/react";
 import ReactMarkdown from "react-markdown";
-import type { Message } from "src/types/messageType";
 
-export const Messages = ({ messages }: { messages: Message[] }) => {
+type Props = {
+  messages: Message[];
+};
+
+export const Messages = ({ messages }: Props) => {
   return (
     <VStack p={3} mb={4}>
       {messages.length === 0 && (

@@ -5,7 +5,7 @@ import { UserInput } from "src/components/UserInput";
 import { Messages } from "src/components/Messages";
 
 export default function App() {
-  // should be replaced
+  // replace with zustand and link to indexeddb
   const [messages, setMessages] = useState<Message[]>([]);
 
   return (
