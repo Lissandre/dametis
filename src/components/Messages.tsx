@@ -8,7 +8,7 @@ type Props = {
 
 export const Messages = ({ messages }: Props) => {
   return (
-    <VStack p={3} mb={4}>
+    <VStack p={3} mb={4} pb={20}>
       {messages.length === 0 && (
         <Text color="gray.400" textAlign="center">
           Start a conversation…
